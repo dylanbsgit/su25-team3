@@ -1,6 +1,6 @@
 # su25-team3
 Dylan Soto
-Terrance Lee
+Terrance Lee (tlee)
 
 ## Title
 > TutorLink
