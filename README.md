@@ -16,9 +16,9 @@ Terrance Lee (tlee)
 ## App Functions
 1. Customer (the user with the customer role):
     1. Create/modify customer profile - <how will your app do this?>
-    2. View available services - .
-    3. Subscribe to available services - .
-    4. Write reviews for subscribed services - .
+    2. View available services - Tutors available for subject...
+    3. Subscribe to available services - Selcting perfered tutor for needed subject
+    4. Write reviews for subscribed services - Writing reviews for tutors only under slected subjects signed up for 
 2. Provider (the user with the provider role):
     1. Create/modify/remove provider profile - Create account using Google API, modify in app
     2. Create services - list subjects to be tutored by provider
