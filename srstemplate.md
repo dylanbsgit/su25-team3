@@ -1,8 +1,8 @@
 # Software Requirements Specification
-## For <project name>
+## For TutorLink
 
 Version 0.1  
-Prepared by <author>  
+Prepared by Dylan Soto, Terrance Lee
 <organization>  
 <date created> 
 
