@@ -21,4 +21,20 @@ public class SubjectController {
     public Subject createSubject(@RequestBody Subject subject) {
         return subjectRepository.save(subject);
     }
+
+    @PutMapping("/{id}")
+public Subject updateSubject(@PathVariable int id, @RequestBody Subject updatedSubject) {
+    return subjectRepository.findById(id).map(subject -> {
+        subject.setName(updatedSubject.getName());
+        subject.setCategory(updatedSubject.getCategory());
+        subject.setLevel(updatedSubject.getLevel());
+        return subjectRepository.save(subject);
+    }).orElseThrow(() -> new RuntimeException("Subject not found"));
+}
+
+@DeleteMapping("/{id}")
+public void deleteSubject(@PathVariable int id) {
+    subjectRepository.deleteById(id);
+}
+
 }
