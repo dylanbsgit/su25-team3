@@ -57,7 +57,7 @@ Tutor Link is a web-based platform that allows students to search for tutors bas
 ---
 
 ## 3. UML Class Diagram
-![UML Class Diagram](class-diagram.pdf)
+![UML Class Diagram](https://github.com/dylanbsgit/su25-team3/blob/t_lee/backend-student/object-oriented-design/class-diagram.pdf)
 
 ---
 
