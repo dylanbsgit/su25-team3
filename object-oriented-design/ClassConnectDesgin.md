@@ -34,8 +34,8 @@ Tutor Link is a web-based platform that allows students to search for tutors bas
 ## 2. Use Cases
 
 ### 2.1 Use Case Model
-(![image](https://github.com/user-attachments/assets/bfb0f39f-61fb-4b25-8841-202efc91adc5)
-)
+![image](https://github.com/user-attachments/assets/bfb0f39f-61fb-4b25-8841-202efc91adc5)
+
 
 ### 2.2 Use Case Descriptions
 
@@ -58,12 +58,12 @@ Tutor Link is a web-based platform that allows students to search for tutors bas
 ---
 
 ## 3. UML Class Diagram
-![UML Class Diagram](https://github.com/dylanbsgit/su25-team3/blob/t_lee/backend-student/object-oriented-design/class-diagram.pdf)
+![image](https://github.com/user-attachments/assets/27dd6fe1-25a0-49e8-8b61-93fc3f78cb5e)
 
 ---
 
 ## 4. Database Schema
-![Database Schema](database-schema.pdf)
+![image](https://github.com/user-attachments/assets/f77d5d12-b817-45de-b3e6-ab0081c44a24)
 
 The schema includes the following tables:
 
