@@ -34,7 +34,7 @@ Tutor Link is a web-based platform that allows students to search for tutors bas
 ## 2. Use Cases
 
 ### 2.1 Use Case Model
-![Use Case Model](![image](https://github.com/user-attachments/assets/bfb0f39f-61fb-4b25-8841-202efc91adc5)
+(![image](https://github.com/user-attachments/assets/bfb0f39f-61fb-4b25-8841-202efc91adc5)
 )
 
 ### 2.2 Use Case Descriptions
