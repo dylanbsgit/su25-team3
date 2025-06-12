@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - TutorLink</title>
+    <link rel="stylesheet" href="TL_student_dash.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">TutorLink</div>
+            <ul class="nav-links">
+                <li><a href="../TL_index.html">Home</a></li>
+                <li><a href="TL_student.html">Find a Tutor</a></li>
+                <li><a href="TL_student_dash.html">Student Dashboard</a></li>
+                <li><a href="../provider prototype/TL_tutor.html">Tutor Dashboard</a></li>
+                <li><a href="../provider prototype/TL_messages.html">Messages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Student Dashboard -->
+        <div class="page active">
+            <div class="dashboard-header">
+                <h1>Welcome back, Sarah Kim!</h1>
+                <p>Sophomore, Engineering • University of California, Berkeley</p>
+                <button class="btn btn-secondary">Edit Profile</button>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="tutor-stats">
+                <div class="stat-card">
+                    <h3>3</h3>
+                    <p>Active Tutors</p>
+                </div>
+                <div class="stat-card">
+                    <h3>12</h3>
+                    <p>Sessions This Month</p>
+                </div>
+            </div>
+
+            <!-- Main Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Upcoming Sessions -->
+                <div class="dashboard-section">
+                    <h2>Upcoming Tutoring Sessions</h2>
+                    <div class="appointment-list">
+                        <div class="appointment-item">
+                            <div class="appointment-time">
+                                <div class="date">Today</div>
+                                <div class="time">4:00 PM</div>
+                            </div>
+                            <div class="appointment-details">
+                                <strong>Alex Martinez - Mathematics</strong>
+                                <p>Calculus II - Integration by Parts</p>
+                                <span class="location">📍 Library Study Room 2B</span>
+                            </div>
+                            <div class="appointment-actions">
+                                <button class="btn btn-small btn-primary">Message</button>
+                                <button class="btn btn-small btn-secondary">Reschedule</button>
+                            </div>
+                        </div>
+                        <div class="appointment-item">
+                            <div class="appointment-time">
+                                <div class="date">Tomorrow</div>
+                                <div class="time">6:30 PM</div>
+                            </div>
+                            <div class="appointment-details">
+                                <strong>Jessica Lee - Chemistry</strong>
+                                <p>Organic Chemistry - Reaction Mechanisms</p>
+                                <span class="location">💻 Online Session</span>
+                            </div>
+                            <div class="appointment-actions">
+                                <button class="btn btn-small btn-primary">Join Session</button>
+                                <button class="btn btn-small btn-secondary">Reschedule</button>
+                            </div>
+                        </div>
+                        <div class="appointment-item">
+                            <div class="appointment-time">
+                                <div class="date">Thu</div>
+                                <div class="time">7:00 PM</div>
+                            </div>
+                            <div class="appointment-details">
+                                <strong>Ryan Thompson - Computer Science</strong>
+                                <p>Data Structures - Binary Trees</p>
+                                <span class="location">💻 Online Session</span>
+                            </div>
+                            <div class="appointment-actions">
+                                <button class="btn btn-small btn-primary">Message</button>
+                                <button class="btn btn-small btn-secondary">Reschedule</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Tutors -->
+                <div class="dashboard-section">
+                    <h2>My Tutors</h2>
+                    <div class="tutors-grid">
+                        <div class="tutor-card">
+                            <div class="tutor-avatar">AM</div>
+                            <h3>Alex Martinez</h3>
+                            <div class="tutor-subject">Mathematics</div>
+                            <div class="tutor-info">
+                                <span>⭐ 4.9/5</span>
+                                <span class="price">$25/hour</span>
+                            </div>
+                            <div class="tutor-details">
+                                <p><strong>Next Session:</strong> Today 4:00 PM</p>
+                                <p><strong>Total Sessions:</strong> 8 completed</p>
+                            </div>
+                            <button class="btn btn-primary full-width">Message Tutor</button>
+                        </div>
+
+                        <div class="tutor-card">
+                            <div class="tutor-avatar">JL</div>
+                            <h3>Jessica Lee</h3>
+                            <div class="tutor-subject">Chemistry</div>
+                            <div class="tutor-info">
+                                <span>⭐ 4.8/5</span>
+                                <span class="price">$30/hour</span>
+                            </div>
+                            <div class="tutor-details">
+                                <p><strong>Next Session:</strong> Tomorrow 6:30 PM</p>
+                                <p><strong>Total Sessions:</strong> 3 completed</p>
+                            </div>
+                            <button class="btn btn-primary full-width">Message Tutor</button>
+                        </div>
+
+                        <div class="tutor-card">
+                            <div class="tutor-avatar">RT</div>
+                            <h3>Ryan Thompson</h3>
+                            <div class="tutor-subject">Computer Science</div>
+                            <div class="tutor-info">
+                                <span>⭐ 5.0/5</span>
+                                <span class="price">$28/hour</span>
+                            </div>
+                            <div class="tutor-details">
+                                <p><strong>Next Session:</strong> Thursday 7:00 PM</p>
+                                <p><strong>Total Sessions:</strong> 1 completed</p>
+                            </div>
+                            <button class="btn btn-primary full-width">Message Tutor</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="dashboard-section">
+                    <h2>Quick Actions</h2>
+                    <div class="quick-actions">
+                        <button class="action-card">
+                            <div class="action-icon">🔍</div>
+                            <h4>Find New Tutor</h4>
+                            <p>Browse available tutors</p>
+                        </button>
+                        <button class="action-card">
+                            <div class="action-icon">📅</div>
+                            <h4>Schedule Session</h4>
+                            <p>Book time with your tutors</p>
+                        </button>
+                        <button class="action-card">
+                            <div class="action-icon">💬</div>
+                            <h4>Message Tutors</h4>
+                            <p>Chat with your tutors</p>
+                        </button>
+                        <button class="action-card">
+                            <div class="action-icon">⭐</div>
+                            <h4>Rate & Review</h4>
+                            <p>Leave feedback for tutors</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 TutorLink - College Tutoring Platform</p>
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Help</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
