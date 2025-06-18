@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Dashboard - TutorLink</title>
+    <link rel="stylesheet" href="TL_tutor.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">TutorLink</div>
+            <ul class="nav-links">
+                <li><a href="../TL_index.html">Home</a></li>
+                <li><a href="../customer/TL_student.html">Find a Tutor</a></li>
+                <li><a href="../customer/TL_student_dash.html">Student Dashboard</a></li>
+                <li><a href="TL_tutor.html">Tutor Dashboard</a></li>
+                <li><a href="TL_messages.html">Messages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Tutor Dashboard -->
+        <div class="page active">
+            <div class="dashboard-header">
+                <h1>Welcome, Alex Martinez!</h1>
+                <p>Mathematics Tutor • Senior, Applied Math • UC Berkeley</p>
+                <button class="btn btn-secondary">Edit Profile</button>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="tutor-stats">
+                <div class="stat-card">
+                    <h3>12</h3>
+                    <p>Active Students</p>
+                </div>
+                <div class="stat-card">
+                    <h3>4.9</h3>
+                    <p>Average Rating</p>
+                </div>
+                <div class="stat-card">
+                    <h3>$480</h3>
+                    <p>This Month</p>
+                </div>
+                <div class="stat-card">
+                    <h3>23</h3>
+                    <p>Total Reviews</p>
+                </div>
+            </div>
+
+            <!-- Main Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Pending Requests -->
+                <div class="dashboard-section">
+                    <h2>New Tutoring Requests</h2>
+                    <div class="request-list">
+                        <div class="request-item">
+                            <div class="request-info">
+                                <strong>Sarah Kim</strong>
+                                <span>Sophomore, Engineering</span>
+                                <p>Needs help with Calculus II - derivatives and integration</p>
+                                <small>Requested 2 hours ago</small>
+                            </div>
+                            <div class="request-actions">
+                                <button class="btn btn-primary btn-small">Accept</button>
+                                <button class="btn btn-secondary btn-small">Decline</button>
+                            </div>
+                        </div>
+                        <div class="request-item">
+                            <div class="request-info">
+                                <strong>Mike Johnson</strong>
+                                <span>Junior, Business</span>
+                                <p>Looking for help with Statistics - hypothesis testing</p>
+                                <small>Requested 5 hours ago</small>
+                            </div>
+                            <div class="request-actions">
+                                <button class="btn btn-primary btn-small">Accept</button>
+                                <button class="btn btn-secondary btn-small">Decline</button>
+                            </div>
+                        </div>
+                        <div class="request-item">
+                            <div class="request-info">
+                                <strong>Emily Chen</strong>
+                                <span>Freshman, Pre-Med</span>
+                                <p>Struggling with Linear Algebra - matrix operations</p>
+                                <small>Requested 1 day ago</small>
+                            </div>
+                            <div class="request-actions">
+                                <button class="btn btn-primary btn-small">Accept</button>
+                                <button class="btn btn-secondary btn-small">Decline</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Appointments -->
+                <div class="dashboard-section">
+                    <h2>Upcoming Appointments</h2>
+                    <div class="appointment-list">
+                        <div class="appointment-item">
+                            <div class="appointment-time">
+                                <div class="date">Today</div>
+                                <div class="time">3:00 PM</div>
+                            </div>
+                            <div class="appointment-details">
+                                <strong>Jessica Lopez</strong>
+                                <p>Calculus I - Limits and Continuity</p>
+                                <span class="location">📍 Library Study Room 3A</span>
+                            </div>
+                            <div class="appointment-actions">
+                                <button class="btn btn-small btn-primary">Message</button>
+                                <button class="btn btn-small btn-secondary">Reschedule</button>
+                            </div>
+                        </div>
+                        <div class="appointment-item">
+                            <div class="appointment-time">
+                                <div class="date">Tomorrow</div>
+                                <div class="time">7:00 PM</div>
+                            </div>
+                            <div class="appointment-details">
+                                <strong>David Park</strong>
+                                <p>Statistics - Probability Distributions</p>
+                                <span class="location">💻 Online Session</span>
+                            </div>
+                            <div class="appointment-actions">
+                                <button class="btn btn-small btn-primary">Message</button>
+                                <button class="btn btn-small btn-secondary">Reschedule</button>
+                            </div>
+                        </div>
+                        <div class="appointment-item">
+                            <div class="appointment-time">
+                                <div class="date">Wed</div>
+                                <div class="time">6:30 PM</div>
+                            </div>
+                            <div class="appointment-details">
+                                <strong>Amanda Rivera</strong>
+                                <p>Differential Equations - First Order</p>
+                                <span class="location">📍 Math Building Room 205</span>
+                            </div>
+                            <div class="appointment-actions">
+                                <button class="btn btn-small btn-primary">Message</button>
+                                <button class="btn btn-small btn-secondary">Reschedule</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="dashboard-section">
+                    <h2>Quick Actions</h2>
+                    <div class="quick-actions">
+                        <button class="action-card">
+                            <div class="action-icon">📅</div>
+                            <h4>Set Availability</h4>
+                            <p>Update your available hours</p>
+                        </button>
+                        <button class="action-card">
+                            <div class="action-icon">💰</div>
+                            <h4>Update Rates</h4>
+                            <p>Change your hourly pricing</p>
+                        </button>
+                        <button class="action-card">
+                            <div class="action-icon">📚</div>
+                            <h4>Add Subjects</h4>
+                            <p>Expand your tutoring areas</p>
+                        </button>
+                        <button class="action-card">
+                            <div class="action-icon">📊</div>
+                            <h4>View Analytics</h4>
+                            <p>See detailed performance stats</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 TutorLink - College Tutoring Platform</p>
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Help</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

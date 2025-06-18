@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Tutor - TutorLink</title>
+    <link rel="stylesheet" href="TL_student.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">TutorLink</div>
+            <ul class="nav-links">
+                <li><a href="../TL_index.html">Home</a></li>
+                <li><a href="TL_student.html">Find a Tutor</a></li>
+                <li><a href="TL_student_dash.html">Student Dashboard</a></li>
+                <li><a href="../provider prototype/TL_tutor.html">Tutor Dashboard</a></li>
+                <li><a href="../provider prototype/TL_messages.html">Messages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Student Page Content -->
+        <div class="page active">
+            <div class="page-header">
+                <h1>Find Your Perfect Tutor</h1>
+                <p>Connect with qualified college tutors who can help you succeed in your studies</p>
+            </div>
+
+            <!-- Login/Signup Notice -->
+            <div class="auth-notice">
+                <h3>Get Started</h3>
+                <p>Create a free account to contact tutors and schedule sessions</p>
+                <div class="auth-buttons">
+                    <button class="btn btn-primary">Sign Up as Student</button>
+                    <button class="btn btn-secondary">Login</button>
+                </div>
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <h2>Search for Tutors</h2>
+                <form class="search-form">
+                    <input type="text" placeholder="Enter subject (e.g., Calculus, Organic Chemistry, Python)" class="search-input">
+                    <select class="search-select">
+                        <option value="">Select Tutor Level</option>
+                        <option value="undergraduate">Undergraduate Student</option>
+                        <option value="graduate">Graduate Student</option>
+                        <option value="phd">PhD Student</option>
+                    </select>
+                    <select class="search-select">
+                        <option value="">Price Range</option>
+                        <option value="15-20">$15-20/hour</option>
+                        <option value="20-25">$20-25/hour</option>
+                        <option value="25-30">$25-30/hour</option>
+                        <option value="30+">$30+/hour</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Search Tutors</button>
+                </form>
+            </div>
+
+            <!-- Featured Tutors -->
+            <div class="tutors-section">
+                <h2>Featured Tutors</h2>
+                <div class="tutors-grid">
+                    <div class="tutor-card">
+                        <div class="tutor-avatar">AM</div>
+                        <h3>Alex Martinez</h3>
+                        <div class="tutor-subject">Mathematics</div>
+                        <div class="tutor-info">
+                            <span>⭐ 4.9/5 (23 reviews)</span>
+                            <span class="price">$25/hour</span>
+                        </div>
+                        <div class="tutor-details">
+                            <p><strong>Year:</strong> Senior</p>
+                            <p><strong>Major:</strong> Applied Mathematics</p>
+                            <p><strong>University:</strong> UC Berkeley</p>
+                            <p><strong>Specializes in:</strong> Calculus I-III, Linear Algebra, Differential Equations</p>
+                            <p><strong>Experience:</strong> 2 years as math tutor, former TA</p>
+                        </div>
+                        <div class="tutor-availability">
+                            <strong>Available:</strong> Mon-Thu 6-9 PM, Weekends
+                        </div>
+                        <button class="btn btn-primary full-width">Contact Tutor</button>
+                    </div>
+
+                    <div class="tutor-card">
+                        <div class="tutor-avatar">JL</div>
+                        <h3>Jessica Lee</h3>
+                        <div class="tutor-subject">Chemistry</div>
+                        <div class="tutor-info">
+                            <span>⭐ 4.8/5 (31 reviews)</span>
+                            <span class="price">$30/hour</span>
+                        </div>
+                        <div class="tutor-details">
+                            <p><strong>Year:</strong> Graduate Student</p>
+                            <p><strong>Major:</strong> Biochemistry PhD</p>
+                            <p><strong>University:</strong> Stanford University</p>
+                            <p><strong>Specializes in:</strong> General Chemistry, Organic Chemistry, Biochemistry</p>
+                            <p><strong>Experience:</strong> 3 years TA experience, research assistant</p>
+                        </div>
+                        <div class="tutor-availability">
+                            <strong>Available:</strong> Tue-Fri 7-10 PM, Saturday mornings
+                        </div>
+                        <button class="btn btn-primary full-width">Contact Tutor</button>
+                    </div>
+
+                    <div class="tutor-card">
+                        <div class="tutor-avatar">RT</div>
+                        <h3>Ryan Thompson</h3>
+                        <div class="tutor-subject">Computer Science</div>
+                        <div class="tutor-info">
+                            <span>⭐ 5.0/5 (18 reviews)</span>
+                            <span class="price">$28/hour</span>
+                        </div>
+                        <div class="tutor-details">
+                            <p><strong>Year:</strong> Junior</p>
+                            <p><strong>Major:</strong> Computer Science</p>
+                            <p><strong>University:</strong> MIT</p>
+                            <p><strong>Specializes in:</strong> Python, Java, Data Structures, Algorithms</p>
+                            <p><strong>Experience:</strong> Former CS TA, software engineering intern</p>
+                        </div>
+                        <div class="tutor-availability">
+                            <strong>Available:</strong> Mon, Wed, Fri 5-8 PM, Sunday afternoons
+                        </div>
+                        <button class="btn btn-primary full-width">Contact Tutor</button>
+                    </div>
+
+                    <div class="tutor-card">
+                        <div class="tutor-avatar">EG</div>
+                        <h3>Emily Garcia</h3>
+                        <div class="tutor-subject">Physics</div>
+                        <div class="tutor-info">
+                            <span>⭐ 4.7/5 (15 reviews)</span>
+                            <span class="price">$26/hour</span>
+                        </div>
+                        <div class="tutor-details">
+                            <p><strong>Year:</strong> Senior</p>
+                            <p><strong>Major:</strong> Physics</p>
+                            <p><strong>University:</strong> Caltech</p>
+                            <p><strong>Specializes in:</strong> General Physics, Mechanics, Electromagnetism</p>
+                            <p><strong>Experience:</strong> Physics lab TA, 1.5 years tutoring</p>
+                        </div>
+                        <div class="tutor-availability">
+                            <strong>Available:</strong> Tue-Thu 6-9 PM, Weekend mornings
+                        </div>
+                        <button class="btn btn-primary full-width">Contact Tutor</button>
+                    </div>
+
+                    <div class="tutor-card">
+                        <div class="tutor-avatar">DK</div>
+                        <h3>David Kim</h3>
+                        <div class="tutor-subject">Economics</div>
+                        <div class="tutor-info">
+                            <span>⭐ 4.9/5 (27 reviews)</span>
+                            <span class="price">$24/hour</span>
+                        </div>
+                        <div class="tutor-details">
+                            <p><strong>Year:</strong> Graduate Student</p>
+                            <p><strong>Major:</strong> Economics PhD</p>
+                            <p><strong>University:</strong> Harvard University</p>
+                            <p><strong>Specializes in:</strong> Microeconomics, Macroeconomics, Statistics</p>
+                            <p><strong>Experience:</strong> Economics TA, research assistant</p>
+                        </div>
+                        <div class="tutor-availability">
+                            <strong>Available:</strong> Mon-Wed 7-10 PM, Saturday afternoons
+                        </div>
+                        <button class="btn btn-primary full-width">Contact Tutor</button>
+                    </div>
+
+                    <div class="tutor-card">
+                        <div class="tutor-avatar">SJ</div>
+                        <h3>Sarah Johnson</h3>
+                        <div class="tutor-subject">Biology</div>
+                        <div class="tutor-info">
+                            <span>⭐ 4.8/5 (22 reviews)</span>
+                            <span class="price">$27/hour</span>
+                        </div>
+                        <div class="tutor-details">
+                            <p><strong>Year:</strong> Senior</p>
+                            <p><strong>Major:</strong> Biology (Pre-Med)</p>
+                            <p><strong>University:</strong> UCLA</p>
+                            <p><strong>Specializes in:</strong> General Biology, Cell Biology, Genetics</p>
+                            <p><strong>Experience:</strong> Biology lab TA, peer tutor for 2 years</p>
+                        </div>
+                        <div class="tutor-availability">
+                            <strong>Available:</strong> Mon, Thu 6-9 PM, Weekend evenings
+                        </div>
+                        <button class="btn btn-primary full-width">Contact Tutor</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How It Works for Students -->
+            <div class="how-it-works">
+                <h2>How It Works for Students</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Create Your Profile</h4>
+                        <p>Sign up with your college email and tell us what subjects you need help with</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Browse & Contact Tutors</h4>
+                        <p>Search through our database of qualified tutors and reach out to those who match your needs</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Schedule Your Session</h4>
+                        <p>Coordinate with your tutor to find a time that works for both of you</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4>Learn & Succeed</h4>
+                        <p>Meet with your tutor, get the help you need, and watch your grades improve!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Stories -->
+            <div class="success-stories">
+                <h2>Student Success Stories</h2>
+                <div class="testimonials">
+                    <div class="testimonial">
+                        <p>"I was struggling with Calculus II and about to drop the class. My tutor Alex helped me understand the concepts I was missing and I ended up with a B+ in the course!"</p>
+                        <div class="testimonial-author">
+                            <strong>Mike Chen</strong>
+                            <span>Engineering Student, UC Berkeley</span>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Organic Chemistry seemed impossible until I found Jessica. She broke down complex reactions in a way that finally made sense to me. Couldn't have passed without her!"</p>
+                        <div class="testimonial-author">
+                            <strong>Amanda Rodriguez</strong>
+                            <span>Pre-Med Student, Stanford</span>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Learning Python seemed overwhelming, but Ryan made it so much easier. Now I'm confident in my programming skills and even considering a CS minor!"</p>
+                        <div class="testimonial-author">
+                            <strong>Taylor Williams</strong>
+                            <span>Business Student, MIT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final CTA -->
+            <div class="final-cta">
+                <h2>Ready to Find Your Tutor?</h2>
+                <p>Join thousands of students who have improved their grades with TutorLink</p>
+                <button class="btn btn-primary btn-large">Get Started - It's Free!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 TutorLink - College Tutoring Platform</p>
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Help</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

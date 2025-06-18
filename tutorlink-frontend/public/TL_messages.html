@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - TutorLink</title>
+    <link rel="stylesheet" href="TL_messages.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">TutorLink</div>
+            <ul class="nav-links">
+                <li><a href="../TL_index.html">Home</a></li>
+                <li><a href="../customer/TL_student.html">Find a Tutor</a></li>
+                <li><a href="../customer/TL_student_dash.html">Student Dashboard</a></li>
+                <li><a href="TL_tutor.html">Tutor Dashboard</a></li>
+                <li><a href="TL_messages.html">Messages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Messages Page -->
+        <div class="page active">
+            <div class="page-header">
+                <h1>Messages</h1>
+                <p>Chat with your tutors and students</p>
+            </div>
+
+            <!-- Conversations List -->
+            <div class="dashboard-section">
+                <h2>Recent Conversations</h2>
+                <div class="request-list">
+                    <div class="request-item">
+                        <div class="request-info">
+                            <div class="tutor-avatar" style="width: 50px; height: 50px; margin-right: 1rem;">AM</div>
+                            <div>
+                                <strong>Alex Martinez</strong>
+                                <span style="display: block; color: #4a90e2; font-size: 0.9rem;">Mathematics Tutor</span>
+                                <p>Great job on today's session! The integration...</p>
+                                <small>2 minutes ago</small>
+                            </div>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn btn-primary btn-small">Open Chat</button>
+                        </div>
+                    </div>
+
+                    <div class="request-item">
+                        <div class="request-info">
+                            <div class="tutor-avatar" style="width: 50px; height: 50px; margin-right: 1rem;">JL</div>
+                            <div>
+                                <strong>Jessica Lee</strong>
+                                <span style="display: block; color: #4a90e2; font-size: 0.9rem;">Chemistry Tutor</span>
+                                <p>Let's focus on reaction mechanisms in our next...</p>
+                                <small>1 hour ago</small>
+                            </div>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn btn-primary btn-small">Open Chat</button>
+                        </div>
+                    </div>
+
+                    <div class="request-item">
+                        <div class="request-info">
+                            <div class="tutor-avatar" style="width: 50px; height: 50px; margin-right: 1rem;">RT</div>
+                            <div>
+                                <strong>Ryan Thompson</strong>
+                                <span style="display: block; color: #4a90e2; font-size: 0.9rem;">Computer Science Tutor</span>
+                                <p>I've attached some practice problems for...</p>
+                                <small>Yesterday</small>
+                            </div>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn btn-primary btn-small">Open Chat</button>
+                        </div>
+                    </div>
+
+                    <div class="request-item">
+                        <div class="request-info">
+                            <div class="tutor-avatar" style="width: 50px; height: 50px; margin-right: 1rem;">SK</div>
+                            <div>
+                                <strong>Sarah Kim</strong>
+                                <span style="display: block; color: #4a90e2; font-size: 0.9rem;">Student</span>
+                                <p>Thanks for accepting my tutoring request!</p>
+                                <small>2 days ago</small>
+                            </div>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn btn-primary btn-small">Open Chat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Chat -->
+            <div class="dashboard-section">
+                <h2>Chat with Alex Martinez</h2>
+                
+                <!-- Chat Header -->
+                <div style="display: flex; align-items: center; margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 8px; border: 1px solid #e9ecef;">
+                    <div class="tutor-avatar" style="margin-right: 1rem;">AM</div>
+                    <div>
+                        <h4 style="margin: 0;">Alex Martinez</h4>
+                        <span style="color: #666; font-size: 0.9rem;">Mathematics Tutor • Online</span>
+                    </div>
+                    <div style="margin-left: auto;">
+                        <button class="btn btn-secondary btn-small" style="margin-right: 0.5rem;">📞 Call</button>
+                        <button class="btn btn-secondary btn-small">📅 Schedule</button>
+                    </div>
+                </div>
+
+                <!-- Messages -->
+                <div style="background: #f8f9fa; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; min-height: 400px;">
+                    
+                    <!-- Received Message -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="background: white; padding: 1rem; border-radius: 18px; max-width: 70%; border: 1px solid #e9ecef; border-bottom-left-radius: 4px;">
+                            Hi Sarah! I saw you wanted to schedule a calculus session. When works best for you?
+                        </div>
+                        <small style="color: #999; font-size: 0.8rem;">Today, 2:15 PM</small>
+                    </div>
+
+                    <!-- Sent Message -->
+                    <div style="margin-bottom: 1rem; display: flex; flex-direction: column; align-items: flex-end;">
+                        <div style="background: #4a90e2; color: white; padding: 1rem; border-radius: 18px; max-width: 70%; border-bottom-right-radius: 4px;">
+                            Hi Alex! Tomorrow at 4 PM would be perfect if you're available.
+                        </div>
+                        <small style="color: #999; font-size: 0.8rem;">Today, 2:18 PM</small>
+                    </div>
+
+                    <!-- Received Message -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="background: white; padding: 1rem; border-radius: 18px; max-width: 70%; border: 1px solid #e9ecef; border-bottom-left-radius: 4px;">
+                            Perfect! I'll book us Library Study Room 2B. What specific topics do you want to cover?
+                        </div>
+                        <small style="color: #999; font-size: 0.8rem;">Today, 2:20 PM</small>
+                    </div>
+
+                    <!-- Sent Message -->
+                    <div style="margin-bottom: 1rem; display: flex; flex-direction: column; align-items: flex-end;">
+                        <div style="background: #4a90e2; color: white; padding: 1rem; border-radius: 18px; max-width: 70%; border-bottom-right-radius: 4px;">
+                            I'm really struggling with integration by parts. I understand the formula but get confused with which part to choose as u and dv.
+                        </div>
+                        <small style="color: #999; font-size: 0.8rem;">Today, 2:22 PM</small>
+                    </div>
+
+                    <!-- Received Message -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="background: white; padding: 1rem; border-radius: 18px; max-width: 70%; border: 1px solid #e9ecef; border-bottom-left-radius: 4px;">
+                            That's a common issue! I have a great memory trick for that. We'll definitely cover it tomorrow.
+                        </div>
+                        <small style="color: #999; font-size: 0.8rem;">Today, 2:25 PM</small>
+                    </div>
+
+                    <!-- Sent Message -->
+                    <div style="margin-bottom: 1rem; display: flex; flex-direction: column; align-items: flex-end;">
+                        <div style="background: #4a90e2; color: white; padding: 1rem; border-radius: 18px; max-width: 70%; border-bottom-right-radius: 4px;">
+                            Thank you so much! That LIATE method you taught me is a game-changer. I feel much more confident now.
+                        </div>
+                        <small style="color: #999; font-size: 0.8rem;">Today, 6:02 PM</small>
+                    </div>
+
+                </div>
+
+                <!-- Message Input -->
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                    <input type="text" placeholder="Type your message..." style="flex: 1; padding: 0.75rem 1rem; border: 1px solid #e9ecef; border-radius: 25px; font-size: 1rem;">
+                    <button class="btn btn-secondary" style="border-radius: 25px;">+</button>
+                    <button class="btn btn-primary" style="border-radius: 25px;">Send</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Simple Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 TutorLink - College Tutoring Platform</p>
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Help</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

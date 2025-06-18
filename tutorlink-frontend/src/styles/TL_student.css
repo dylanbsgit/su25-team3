@@ -1,0 +1,432 @@
+/* TL_student.css - Find a Tutor Page Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+.header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 1rem 0;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Container & Pages */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.page.active {
+    display: block;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-large {
+    padding: 16px 32px;
+    font-size: 1.2rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Student Page */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.auth-notice {
+    background: #e3f2fd;
+    border: 1px solid #4a90e2;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-notice h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.search-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid #e9ecef;
+}
+
+.search-section h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.search-form {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-form input, .search-form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.search-select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Tutors */
+.tutors-section {
+    margin-top: 2rem;
+}
+
+.tutors-section h2 {
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.tutors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.tutor-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.tutor-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.tutor-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.tutor-subject {
+    color: #4a90e2;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.tutor-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.price {
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+.tutor-details p {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.tutor-availability {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: left;
+}
+
+/* Success Stories & Testimonials */
+.success-stories, .how-it-works {
+    margin-top: 4rem;
+}
+
+.success-stories h2, .how-it-works h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonial {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #e9ecef;
+}
+
+.testimonial p {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.testimonial-author strong {
+    color: #333;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.testimonial-author span {
+    color: #4a90e2;
+    font-size: 0.9rem;
+}
+
+/* Steps */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.step {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: #4a90e2;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.step h4 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Final CTA */
+.final-cta {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 3rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.final-cta h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.final-cta p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    margin-top: 4rem;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form input, .search-form select {
+        min-width: 100%;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonials, .tutors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        text-align: center;
+        flex-direction: column;
+    }
+}
