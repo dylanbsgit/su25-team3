@@ -1,6 +1,7 @@
 // src/pages/StudentDashboard.jsx
 import React, { useEffect, useState } from "react";
 import "../styles/TL_student_dash.css";
+import "../styles/TL_student.css";
 import axios from "axios";
 
 function StudentDashboard() {
