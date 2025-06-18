@@ -1,9 +1,12 @@
 // src/pages/HomePage.jsx
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import "../styles/TL_index.css";
 
 const HomePage = () => {
+  const { user, role, isAuthenticated, logout } = useAuth();
+
   return (
     <div>
       {/* Header */}
@@ -12,10 +15,29 @@ const HomePage = () => {
           <div className="logo">TutorLink</div>
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/student">Find a Tutor</Link></li>
-            <li><Link to="/student/dashboard">Student Dashboard</Link></li>
-            <li><Link to="/tutor">Tutor Dashboard</Link></li>
-            <li><Link to="/login" className="btn btn-login">Login</Link></li>
+            {isAuthenticated ? (
+              <>
+                <li><Link to="/student">Find a Tutor</Link></li>
+                {role === 'student' && <li><Link to="/student/dashboard">Student Dashboard</Link></li>}
+                {role === 'tutor' && <li><Link to="/tutor">Tutor Dashboard</Link></li>}
+                <li>
+                  <span style={{ color: 'white', marginRight: '10px' }}>
+                    Welcome, {user?.name}!
+                  </span>
+                </li>
+                <li>
+                  <button 
+                    onClick={logout}
+                    className="btn btn-secondary"
+                    style={{ background: '#6c757d', border: 'none', padding: '8px 16px' }}
+                  >
+                    Logout
+                  </button>
+                </li>
+              </>
+            ) : (
+              <li><Link to="/login" className="btn btn-login">Login</Link></li>
+            )}
           </ul>
         </nav>
       </header>
@@ -31,8 +53,26 @@ const HomePage = () => {
               support in any subject
             </p>
             <div className="cta-buttons">
-              <Link to="/student" className="btn btn-primary">Find a Tutor</Link>
-              <Link to="/tutor" className="btn btn-secondary">Tutor Dashboard</Link>
+              {isAuthenticated ? (
+                <>
+                  {role === 'student' ? (
+                    <>
+                      <Link to="/student" className="btn btn-primary">Find a Tutor</Link>
+                      <Link to="/student/dashboard" className="btn btn-secondary">My Dashboard</Link>
+                    </>
+                  ) : (
+                    <>
+                      <Link to="/tutor" className="btn btn-primary">Tutor Dashboard</Link>
+                      <Link to="/student" className="btn btn-secondary">View Tutors</Link>
+                    </>
+                  )}
+                </>
+              ) : (
+                <>
+                  <Link to="/login" className="btn btn-primary">Get Started</Link>
+                  <Link to="/student" className="btn btn-secondary">Browse Tutors</Link>
+                </>
+              )}
             </div>
           </div>
 

@@ -1,0 +1,14 @@
+{
+  "name": "tutorlink-fullstack",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend-api && ./mvnw spring-boot:run",
+    "start:frontend": "cd tutorlink-frontend && npm start",
+    "install:all": "cd backend-api && ./mvnw clean install && cd ../tutorlink-frontend && npm install",
+    "build": "cd tutorlink-frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

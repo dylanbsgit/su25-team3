@@ -1,48 +1,82 @@
 // src/pages/Login.jsx
+// ==================================================
+
 import React, { useState } from "react";
-import { GoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import "../styles/Login.css";
 
 const Login = () => {
-  const [role, setRole] = useState(null);
-  const [error, setError] = useState(null);
+  const [isLogin, setIsLogin] = useState(true);
+  const [selectedRole, setSelectedRole] = useState('student');
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
+  const { login, register } = useAuth();
+  
+  // Form state
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    major: '',
+    subject: ''
+  });
 
-  const handleSuccess = async (credentialResponse) => {
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     setLoading(true);
-    setError(null);
+    setError('');
+
     try {
-      const res = await fetch("http://localhost:8080/api/auth/google", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          token: credentialResponse.credential,
-          role: role,
-        }),
-      });
-
-      const data = await res.json();
-      setLoading(false);
-
-      if (data.role === "student") {
-        navigate("/student");
-      } else if (data.role === "tutor") {
-        navigate("/tutor");
+      if (isLogin) {
+        await login(formData.email, formData.password, selectedRole);
       } else {
-        setError("Unexpected role received from server.");
+        const registerData = {
+          name: formData.name,
+          email: formData.email,
+          password: formData.password,
+          role: selectedRole,
+          ...(selectedRole === 'student' && { major: formData.major }),
+          ...(selectedRole === 'tutor' && { subject: formData.subject })
+        };
+        await register(registerData);
       }
-    } catch (err) {
+      
+      // Navigate based on role
+      if (selectedRole === 'student') {
+        navigate('/student/dashboard');
+      } else {
+        navigate('/tutor');
+      }
+    } catch (error) {
+      setError(error.message || 'Authentication failed');
+    } finally {
       setLoading(false);
-      setError("Login failed. Please try again.");
-      console.error("Login error:", err);
     }
   };
 
-  const handleError = () => {
-    setError("Google login failed. Please try again.");
-    console.error("Login Failed");
+  const resetForm = () => {
+    setFormData({
+      name: '',
+      email: '',
+      password: '',
+      major: '',
+      subject: ''
+    });
+    setError('');
+  };
+
+  const toggleMode = () => {
+    setIsLogin(!isLogin);
+    resetForm();
   };
 
   return (
@@ -50,27 +84,131 @@ const Login = () => {
       <button className="btn btn-secondary" onClick={() => navigate("/")}>
         &larr; Back to Home
       </button>
-      <h2>Login to TutorLink</h2>
+      
+      <h2>{isLogin ? 'Sign In' : 'Create Account'}</h2>
+      
+      <p>
+        {isLogin ? "Don't have an account? " : "Already have an account? "}
+        <button
+          onClick={toggleMode}
+          className="btn-link"
+          style={{ background: 'none', border: 'none', color: '#4a90e2', textDecoration: 'underline', cursor: 'pointer' }}
+        >
+          {isLogin ? 'Sign up' : 'Sign in'}
+        </button>
+      </p>
 
-      {!role && (
-        <div className="role-select">
-          <p>Select your role:</p>
-          <button className="btn btn-primary" onClick={() => setRole("student")}>I'm a Student</button>
-          <button className="btn btn-secondary" onClick={() => setRole("tutor")}>I'm a Tutor</button>
+      {error && (
+        <div style={{ background: '#fee', border: '1px solid #fcc', color: '#c33', padding: '10px', borderRadius: '4px', marginBottom: '15px' }}>
+          {error}
         </div>
       )}
 
-      {role && (
+      {/* Role Selection */}
+      <div style={{ marginBottom: '20px' }}>
+        <p><strong>I am a:</strong></p>
         <div>
-          <p>You selected: <strong>{role}</strong></p>
-          <GoogleLogin onSuccess={handleSuccess} onError={handleError} />
-          <button className="btn btn-secondary" onClick={() => setRole(null)}>
-            Change Role
-          </button>
-          {loading && <p>Loading...</p>}
-          {error && <p className="error-message">{error}</p>}
+          <label style={{ display: 'block', marginBottom: '8px' }}>
+            <input
+              type="radio"
+              value="student"
+              checked={selectedRole === 'student'}
+              onChange={(e) => setSelectedRole(e.target.value)}
+              style={{ marginRight: '8px' }}
+            />
+            Student - Looking for tutoring help
+          </label>
+          <label style={{ display: 'block' }}>
+            <input
+              type="radio"
+              value="tutor"
+              checked={selectedRole === 'tutor'}
+              onChange={(e) => setSelectedRole(e.target.value)}
+              style={{ marginRight: '8px' }}
+            />
+            Tutor - Offering tutoring services
+          </label>
         </div>
-      )}
+      </div>
+
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+        {!isLogin && (
+          <div>
+            <label>Full Name:</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required={!isLogin}
+              style={{ width: '100%', padding: '8px', marginTop: '4px' }}
+            />
+          </div>
+        )}
+
+        <div>
+          <label>Email:</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            style={{ width: '100%', padding: '8px', marginTop: '4px' }}
+          />
+        </div>
+
+        <div>
+          <label>Password:</label>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleInputChange}
+            required
+            style={{ width: '100%', padding: '8px', marginTop: '4px' }}
+          />
+        </div>
+
+        {!isLogin && selectedRole === 'student' && (
+          <div>
+            <label>Major:</label>
+            <input
+              type="text"
+              name="major"
+              value={formData.major}
+              onChange={handleInputChange}
+              required={!isLogin && selectedRole === 'student'}
+              placeholder="e.g., Computer Science"
+              style={{ width: '100%', padding: '8px', marginTop: '4px' }}
+            />
+          </div>
+        )}
+
+        {!isLogin && selectedRole === 'tutor' && (
+          <div>
+            <label>Subject Expertise:</label>
+            <input
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={handleInputChange}
+              required={!isLogin && selectedRole === 'tutor'}
+              placeholder="e.g., Mathematics"
+              style={{ width: '100%', padding: '8px', marginTop: '4px' }}
+            />
+          </div>
+        )}
+
+        <button
+          type="submit"
+          disabled={loading}
+          className="btn btn-primary"
+          style={{ marginTop: '10px' }}
+        >
+          {loading ? 'Processing...' : (isLogin ? 'Sign In' : 'Sign Up')}
+        </button>
+      </form>
     </div>
   );
 };
